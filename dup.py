@@ -27,8 +27,10 @@ try:
 			q.close()
 		else:
 			print "found "+a
+			o+=1
 		for i in g.readlines():
 			y.append(i)
+	print o
 except IndexError as i:
 	print """
 
