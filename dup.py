@@ -18,15 +18,17 @@ try:
 	x = []
 	y = []
 	o = 0
-	for i in f.readlines():
-		if i not in g.readlines():
+	for i in f:
+		x.append(i)
+	for a in x:
+		if a not in y:
 			q = open(s, "a")
-			q.writelines(i)
+			q.writelines(a)
 			q.close()
 		else:
-			print "found "+i
-
-		
+			print "found "+a
+		for i in g.readlines():
+			y.append(i)
 except IndexError as i:
 	print """
 
